@@ -11,12 +11,12 @@
       "author": "Dmitriy Angve"
     },
     {
-      "title": "1",
+      "title": "default title",
       "author": "Laurence",
       "id": 3
     },
     {
-      "title": "1",
+      "title": "default title",
       "author": "Laurence",
       "id": 4
     },
@@ -24,11 +24,6 @@
       "title": "1",
       "author": "Laurence",
       "id": 5
-    },
-    {
-      "title": "1",
-      "author": "Laurence",
-      "id": 6
     }
   ],
   "comments": [

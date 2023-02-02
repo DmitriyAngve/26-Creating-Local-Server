@@ -10,13 +10,15 @@ btn1.textContent = "Create New";
 window.addEventListener("DOMContentLoaded", getAllPosts);
 
 btn1.addEventListener("click", addPost);
+btn2.addEventListener("click", getAllPosts);
 
 function addPost(e) {
   console.log("Ready");
   e.preventDefault();
+  const title = val1.value || "default title";
   const url = baseurl + "posts";
   const body = {
-    title: val1.value,
+    title: title,
     author: "Laurence",
   };
   const opts = {
