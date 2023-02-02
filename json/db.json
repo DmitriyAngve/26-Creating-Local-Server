@@ -1,0 +1,27 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "Dmitriy Angve"
+    },
+    {
+      "id": 2,
+      "title": "Test 1",
+      "author": "Dmitriy Angve"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "Angve GitHub"
+  },
+  "tester": {
+    "val": 1
+  }
+}
