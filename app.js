@@ -19,7 +19,7 @@ function addPost(e) {
   const url = baseurl + "posts";
   const body = {
     title: title,
-    author: "Laurence",
+    author: "Dmitriy Angve",
   };
   const opts = {
     method: "POST",
