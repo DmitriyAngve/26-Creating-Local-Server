@@ -1,23 +1,17 @@
 const container = document.querySelector(".container");
-const btn1 = document.querySelector(".btn");
-// const btn2 = createElement(parent, typeEle, "Load Posts");
 const val1 = document.querySelector(".val");
 const output = document.querySelector(".output");
 const baseurl = "http://localhost:3000/";
 
+const btn1 = document.querySelector(".btn");
+const btn2 = createMyElement(container, "button", "Load Posts");
 btn1.textContent = "Create New";
 
-window.addEventListener("DOMContentLoaded", (e) => {
-  console.log("page ready");
-  const url = baseurl + "posts";
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => {
-      pageContents(data);
-    });
-});
+window.addEventListener("DOMContentLoaded", getAllPosts);
 
-btn1.addEventListener("click", (e) => {
+btn1.addEventListener("click", addPost);
+
+function addPost(e) {
   console.log("Ready");
   e.preventDefault();
   const url = baseurl + "posts";
@@ -38,13 +32,23 @@ btn1.addEventListener("click", (e) => {
     .then((data) => {
       console.log(data);
     });
-});
+}
+
+function getAllPosts(e) {
+  console.log("page ready");
+  const url = baseurl + "posts";
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      pageContents(data);
+    });
+}
 
 function pageContents(data) {
   console.log(data);
 }
 
-function createElement(parent, typeEle, html) {
+function createMyElement(parent, typeEle, html) {
   const el = document.createElement(typeEle);
   parent.append(el);
   el.innerHTML = html;
