@@ -50,6 +50,7 @@ function pageContents(data) {
   console.log(data);
   output.innerHTML = "";
   const main = cme(output, "div", "");
+  main.classList.add("box");
   data.forEach((el) => {
     console.log(el);
     const in1 = cme(main, "input", "");

@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  display: block;
+  /* text-align: center; */
+}
+
+.box {
+  display: block;
+  width: 70%;
+  border: 1px solid #ddd;
+  margin: 5px auto;
+}
