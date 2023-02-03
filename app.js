@@ -4,7 +4,7 @@ const output = document.querySelector(".output");
 const baseurl = "http://localhost:3000/";
 
 const btn1 = document.querySelector(".btn");
-const btn2 = createMyElement(container, "button", "Load Posts");
+const btn2 = cme(container, "button", "Load Posts");
 btn1.textContent = "Create New";
 
 window.addEventListener("DOMContentLoaded", getAllPosts);
@@ -48,9 +48,17 @@ function getAllPosts(e) {
 
 function pageContents(data) {
   console.log(data);
+  output.innerHTML = "";
+  const main = cme(output, "div", "");
+  data.forEach((el) => {
+    console.log(el);
+    const in1 = cme(main, "input", "");
+    in1.value = el.title;
+  });
 }
 
-function createMyElement(parent, typeEle, html) {
+function cme(parent, typeEle, html) {
+  // cme - createMyElement
   const el = document.createElement(typeEle);
   parent.append(el);
   el.innerHTML = html;
