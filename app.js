@@ -66,13 +66,19 @@ function makeItem(el) {
   const bt1 = cme(btns, "button", "Update");
   const bt2 = cme(btns, "button", "Delete");
   bt1.addEventListener("click", (e) => {
+    // Button for PUT
     const json = {
       title: in1.value,
       author: in2.value,
     };
     updateItem(json, el.id);
   });
-  bt1.addEventListener("click", (e) => {});
+  bt2.addEventListener("click", (e) => {
+    // Button for DELETE
+    const url = baseurl + "posts/" + el.id;
+    fetch(url, { method: "DELETE" });
+    main.remove();
+  });
 }
 
 function updateItem(json, id) {
