@@ -8,6 +8,46 @@ body {
   /* text-align: center; */
 }
 
+.container {
+  text-align: center;
+  margin: auto;
+}
+
+.message {
+  font-size: 1em;
+  color: #222;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.loadPosts {
+  display: block;
+  border-radius: 15px;
+  width: 50%;
+  font-size: 1.2em;
+  background-color: rgb(137, 137, 194);
+  color: rgb(32, 23, 23);
+  margin: auto;
+}
+
+.dashboard button {
+  color: #ddd;
+  font-size: 1em;
+  border-radius: 15px;
+}
+
+.dashboard button:hover {
+  opacity: 0.7;
+}
+
+.dashboard button:nth-child(1) {
+  background-color: rgb(124, 175, 47);
+}
+
+.dashboard button:nth-child(2) {
+  background-color: rgb(218, 99, 20);
+}
+
 .box {
   display: block;
   width: 70%;
@@ -20,4 +60,19 @@ body {
   width: 90%;
   display: block;
   padding: 3px;
+  margin: 5px auto;
+  font-size: 1.2em;
+}
+
+.box button {
+  padding: 10px;
+  width: 40%;
+  cursor: pointer;
+}
+
+.selInfo {
+  width: 30%;
+  display: inline-block;
+  height: 30px;
+  font-size: 1.5em;
 }

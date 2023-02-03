@@ -1,17 +1,21 @@
 const container = document.querySelector(".container");
 const message = cme2(container, "div", "Message Area");
+message.classList.add("message");
 const val1 = document.querySelector(".val");
 const output = document.querySelector(".output");
 const baseurl = "http://localhost:3000/";
 
 const btn1 = document.querySelector(".btn");
 const btn2 = cme2(container, "button", "Load Posts");
+btn2.classList.add("loadPosts");
 btn1.textContent = "Create New";
 
 window.addEventListener("DOMContentLoaded", getAllPosts);
 
 btn1.addEventListener("click", addPost);
 btn2.addEventListener("click", getAllPosts);
+btn1.classList.add("selInfo");
+val1.classList.add("selInfo");
 
 function addPost(e) {
   console.log("ready");
@@ -71,6 +75,7 @@ function makeItem(el) {
   const in2 = cme(main, "input", "");
   in2.value = el.author;
   const btns = cme(main, "div", "");
+  btns.classList.add("dashboard");
   const bt1 = cme(btns, "button", "Update");
   const bt2 = cme(btns, "button", "Delete");
   bt1.addEventListener("click", (e) => {
