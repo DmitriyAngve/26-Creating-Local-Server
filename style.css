@@ -4,7 +4,7 @@
 
 body {
   font-family: "Oswald", sans-serif;
-  display: block;
+  /* display: block; */
   /* text-align: center; */
 }
 
@@ -13,4 +13,11 @@ body {
   width: 70%;
   border: 1px solid #ddd;
   margin: 5px auto;
+  padding: 10px;
+}
+
+.boxinput {
+  width: 90%;
+  display: block;
+  padding: 3px;
 }

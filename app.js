@@ -49,13 +49,47 @@ function getAllPosts(e) {
 function pageContents(data) {
   console.log(data);
   output.innerHTML = "";
+  data.forEach((el) => {
+    makeItem(el);
+  });
+}
+
+function makeItem(el) {
+  console.log(el);
   const main = cme(output, "div", "");
   main.classList.add("box");
-  data.forEach((el) => {
-    console.log(el);
-    const in1 = cme(main, "input", "");
-    in1.value = el.title;
+  const in1 = cme(main, "input", "");
+  in1.value = el.title;
+  const in2 = cme(main, "input", "");
+  in2.value = el.author;
+  const btns = cme(main, "div", "");
+  const bt1 = cme(btns, "button", "Update");
+  const bt2 = cme(btns, "button", "Delete");
+  bt1.addEventListener("click", (e) => {
+    const json = {
+      title: in1.value,
+      author: in2.value,
+    };
+    updateItem(json, el.id);
   });
+  bt1.addEventListener("click", (e) => {});
+}
+
+function updateItem(json, id) {
+  const url = baseurl + "posts/" + id;
+  const opts = {
+    method: "PUT",
+    body: JSON.stringify(json),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  };
+  console.log(opts);
+  fetch(url, opts)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    });
 }
 
 function cme(parent, typeEle, html) {
