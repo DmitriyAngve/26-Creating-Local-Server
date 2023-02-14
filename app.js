@@ -15,6 +15,7 @@ window.addEventListener("DOMContentLoaded", getAllPosts);
 btn1.addEventListener("click", addPost);
 btn2.addEventListener("click", getAllPosts);
 btn1.classList.add("selInfo");
+
 val1.classList.add("selInfo");
 
 function addPost(e) {
